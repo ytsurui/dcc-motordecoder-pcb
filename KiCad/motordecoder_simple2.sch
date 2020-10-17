@@ -1,0 +1,826 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Device:D_Bridge_-AA+ D1
+U 1 1 5F58E9CC
+P 3050 1700
+F 0 "D1" H 3250 1950 50  0000 L CNN
+F 1 "BAS3007" H 3250 1850 50  0000 L CNN
+F 2 "footprint:SOT-143" H 3050 1700 50  0001 C CNN
+F 3 "~" H 3050 1700 50  0001 C CNN
+	1    3050 1700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3050 1400 3050 1300
+Wire Wire Line
+	3050 2000 3050 2100
+Wire Wire Line
+	3050 2100 2450 2100
+Wire Wire Line
+	2450 1300 3050 1300
+Wire Wire Line
+	2750 1700 2650 1700
+Wire Wire Line
+	3350 1700 3650 1700
+Connection ~ 3650 1700
+$Comp
+L Device:C C1
+U 1 1 5F595895
+P 3650 2300
+F 0 "C1" H 3765 2346 50  0000 L CNN
+F 1 "104" H 3765 2255 50  0000 L CNN
+F 2 "footprint:C_1005" H 3688 2150 50  0001 C CNN
+F 3 "~" H 3650 2300 50  0001 C CNN
+	1    3650 2300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3650 2150 3650 1700
+Wire Wire Line
+	3650 2450 3650 2900
+Wire Wire Line
+	3650 1500 3650 1700
+$Comp
+L power:+12V #PWR0101
+U 1 1 5F59C2F8
+P 3650 1500
+F 0 "#PWR0101" H 3650 1350 50  0001 C CNN
+F 1 "+12V" H 3665 1673 50  0000 C CNN
+F 2 "" H 3650 1500 50  0001 C CNN
+F 3 "" H 3650 1500 50  0001 C CNN
+	1    3650 1500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2650 2900 3650 2900
+Wire Wire Line
+	2650 1700 2650 2900
+Connection ~ 3650 2900
+Wire Wire Line
+	3650 2900 3650 3100
+$Comp
+L power:GND #PWR0102
+U 1 1 5F59D19C
+P 3650 3100
+F 0 "#PWR0102" H 3650 2850 50  0001 C CNN
+F 1 "GND" H 3655 2927 50  0000 C CNN
+F 2 "" H 3650 3100 50  0001 C CNN
+F 3 "" H 3650 3100 50  0001 C CNN
+	1    3650 3100
+	1    0    0    -1  
+$EndComp
+Text GLabel 2450 1300 0    50   Input ~ 0
+RAIL+
+Text GLabel 2450 2100 0    50   Input ~ 0
+RAIL-
+$Comp
+L Connector_Generic:Conn_01x06 P9
+U 1 1 5F59D973
+P 800 6000
+F 0 "P9" H 718 6417 50  0000 C CNN
+F 1 "PROG" H 718 6326 50  0000 C CNN
+F 2 "footprint:PAD_PROG_6PIN_HOLE0.7" H 800 6000 50  0001 C CNN
+F 3 "~" H 800 6000 50  0001 C CNN
+	1    800  6000
+	-1   0    0    -1  
+$EndComp
+$Comp
+L MCU_Microchip_ATtiny:ATtiny45-20SU U2
+U 1 1 5F59F09B
+P 4200 5950
+F 0 "U2" H 3671 5996 50  0000 R CNN
+F 1 "ATtiny45-20SU" H 3671 5905 50  0000 R CNN
+F 2 "footprint:TSSOP-8" H 4200 5950 50  0001 C CIN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/atmel-2586-avr-8-bit-microcontroller-attiny25-attiny45-attiny85_datasheet.pdf" H 4200 5950 50  0001 C CNN
+	1    4200 5950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4200 5350 4200 5150
+Wire Wire Line
+	4200 6550 4200 6750
+$Comp
+L power:GND #PWR0103
+U 1 1 5F5A0A39
+P 4200 6750
+F 0 "#PWR0103" H 4200 6500 50  0001 C CNN
+F 1 "GND" H 4205 6577 50  0000 C CNN
+F 2 "" H 4200 6750 50  0001 C CNN
+F 3 "" H 4200 6750 50  0001 C CNN
+	1    4200 6750
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0104
+U 1 1 5F5A0C97
+P 4200 5150
+F 0 "#PWR0104" H 4200 5000 50  0001 C CNN
+F 1 "+5V" H 4215 5323 50  0000 C CNN
+F 2 "" H 4200 5150 50  0001 C CNN
+F 3 "" H 4200 5150 50  0001 C CNN
+	1    4200 5150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4800 5650 5000 5650
+$Comp
+L Device:R R1
+U 1 1 5F5A2071
+P 5000 5200
+F 0 "R1" H 4930 5154 50  0000 R CNN
+F 1 "104" H 4930 5245 50  0000 R CNN
+F 2 "footprint:R_1608" V 4930 5200 50  0001 C CNN
+F 3 "~" H 5000 5200 50  0001 C CNN
+	1    5000 5200
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	5000 5650 5000 5500
+Wire Wire Line
+	4800 5750 5100 5750
+Wire Wire Line
+	4800 5850 5200 5850
+Wire Wire Line
+	5200 5850 5200 5800
+Wire Wire Line
+	4800 5950 5500 5950
+Wire Wire Line
+	5200 5800 5500 5800
+Wire Wire Line
+	5100 5750 5100 5650
+Wire Wire Line
+	5100 5650 5500 5650
+Wire Wire Line
+	5000 5500 5500 5500
+Connection ~ 5000 5500
+Wire Wire Line
+	5000 5350 5000 5500
+Wire Wire Line
+	4800 6050 5200 6050
+Wire Wire Line
+	5200 6050 5200 6100
+Wire Wire Line
+	5200 6100 5500 6100
+Wire Wire Line
+	4800 6150 5100 6150
+Wire Wire Line
+	5100 6150 5100 6250
+Wire Wire Line
+	5100 6250 5500 6250
+Text GLabel 5500 5500 2    50   BiDi ~ 0
+MOSI
+Text GLabel 5500 5650 2    50   Output ~ 0
+PWM
+Text GLabel 5500 5800 2    50   Input ~ 0
+BEMF
+Text GLabel 5500 5950 2    50   Output ~ 0
+REV
+Text GLabel 5500 6100 2    50   Output ~ 0
+FWD
+Text GLabel 5500 6250 2    50   Output ~ 0
+FUNC1
+Text GLabel 5500 4950 2    50   Input ~ 0
+RAIL+
+Wire Wire Line
+	5500 4950 5000 4950
+Wire Wire Line
+	5000 4950 5000 5050
+Wire Wire Line
+	8100 1500 7900 1500
+Wire Wire Line
+	7900 1500 7900 1400
+$Comp
+L power:+12V #PWR0105
+U 1 1 5F5B095B
+P 7900 1400
+F 0 "#PWR0105" H 7900 1250 50  0001 C CNN
+F 1 "+12V" H 7915 1573 50  0000 C CNN
+F 2 "" H 7900 1400 50  0001 C CNN
+F 3 "" H 7900 1400 50  0001 C CNN
+	1    7900 1400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0106
+U 1 1 5F59C116
+P 5550 1500
+F 0 "#PWR0106" H 5550 1350 50  0001 C CNN
+F 1 "+5V" H 5565 1673 50  0000 C CNN
+F 2 "" H 5550 1500 50  0001 C CNN
+F 3 "" H 5550 1500 50  0001 C CNN
+	1    5550 1500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C3
+U 1 1 5F5927FB
+P 5550 2300
+F 0 "C3" H 5665 2346 50  0000 L CNN
+F 1 "226" H 5665 2255 50  0000 L CNN
+F 2 "footprint:C_1608" H 5588 2150 50  0001 C CNN
+F 3 "~" H 5550 2300 50  0001 C CNN
+	1    5550 2300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5550 1500 5550 1700
+Wire Wire Line
+	5350 1700 5550 1700
+Connection ~ 5550 1700
+$Comp
+L 6pin-mosfet:DMG6601LVT Q1
+U 1 1 5F5C0BB3
+P 8600 3550
+F 0 "Q1" H 8791 3596 50  0000 L CNN
+F 1 "DMG6601LVT" H 8791 3505 50  0000 L CNN
+F 2 "footprint:SOT-23-6" H 8791 3459 50  0001 L CIN
+F 3 "http://www.diodes.com/_files/datasheets/DMG6601LVT.pdf" H 8790 3414 50  0001 L CNN
+	1    8600 3550
+	1    0    0    -1  
+$EndComp
+$Comp
+L 6pin-mosfet:DMG6601LVT Q1
+U 2 1 5F5C153A
+P 8600 2000
+F 0 "Q1" H 8791 2046 50  0000 L CNN
+F 1 "DMG6601LVT" H 8791 1955 50  0000 L CNN
+F 2 "footprint:SOT-23-6" H 8791 1909 50  0001 L CIN
+F 3 "http://www.diodes.com/_files/datasheets/DMG6601LVT.pdf" H 8790 1864 50  0001 L CNN
+	2    8600 2000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 5F5C2663
+P 8100 1750
+F 0 "R2" H 8170 1796 50  0000 L CNN
+F 1 "102" H 8170 1705 50  0000 L CNN
+F 2 "footprint:R_1608" V 8030 1750 50  0001 C CNN
+F 3 "~" H 8100 1750 50  0001 C CNN
+	1    8100 1750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8100 1900 8100 2000
+Wire Wire Line
+	8100 1600 8100 1500
+Wire Wire Line
+	8700 1500 8700 1800
+Connection ~ 8700 1500
+$Comp
+L Device:Q_NPN_BEC Q3
+U 1 1 5F5C70E0
+P 8000 2550
+F 0 "Q3" H 8190 2596 50  0000 L CNN
+F 1 "2SC4116" H 8190 2505 50  0000 L CNN
+F 2 "footprint:SC-70" H 8200 2650 50  0001 C CNN
+F 3 "~" H 8000 2550 50  0001 C CNN
+	1    8000 2550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8100 2000 8400 2000
+Wire Wire Line
+	8100 1500 8700 1500
+Wire Wire Line
+	8100 2000 8100 2350
+Connection ~ 8100 2000
+$Comp
+L Device:R R4
+U 1 1 5F5CE947
+P 8100 3200
+F 0 "R4" H 8170 3246 50  0000 L CNN
+F 1 "331" H 8170 3155 50  0000 L CNN
+F 2 "footprint:R_1608" V 8030 3200 50  0001 C CNN
+F 3 "~" H 8100 3200 50  0001 C CNN
+	1    8100 3200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R5
+U 1 1 5F5CF1BB
+P 10600 3200
+F 0 "R5" H 10670 3246 50  0000 L CNN
+F 1 "331" H 10670 3155 50  0000 L CNN
+F 2 "footprint:R_1608" V 10530 3200 50  0001 C CNN
+F 3 "~" H 10600 3200 50  0001 C CNN
+	1    10600 3200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7550 2450 7550 2550
+Wire Wire Line
+	7550 2550 7800 2550
+Wire Wire Line
+	7550 2550 7550 2950
+Connection ~ 7550 2550
+Wire Wire Line
+	8700 2200 8700 2550
+Wire Wire Line
+	7550 3350 7550 3850
+Wire Wire Line
+	7550 3850 8700 3850
+Wire Wire Line
+	8700 3850 8700 3750
+Wire Wire Line
+	7550 3050 7550 2950
+Connection ~ 7550 2950
+Wire Wire Line
+	7550 2150 7550 2000
+Wire Wire Line
+	7550 2000 7350 2000
+$Comp
+L 6pin-mosfet:DMG6601LVT Q2
+U 1 1 5F5E3AEF
+P 10100 3550
+F 0 "Q2" H 10291 3596 50  0000 L CNN
+F 1 "DMG6601LVT" H 10291 3505 50  0000 L CNN
+F 2 "footprint:SOT-23-6" H 10291 3459 50  0001 L CIN
+F 3 "http://www.diodes.com/_files/datasheets/DMG6601LVT.pdf" H 10290 3414 50  0001 L CNN
+	1    10100 3550
+	-1   0    0    -1  
+$EndComp
+$Comp
+L 6pin-mosfet:DMG6601LVT Q2
+U 2 1 5F5E4612
+P 10100 2000
+F 0 "Q2" H 10291 2046 50  0000 L CNN
+F 1 "DMG6601LVT" H 10291 1955 50  0000 L CNN
+F 2 "footprint:SOT-23-6" H 10291 1909 50  0001 L CIN
+F 3 "http://www.diodes.com/_files/datasheets/DMG6601LVT.pdf" H 10290 1864 50  0001 L CNN
+	2    10100 2000
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	10000 3350 10000 2550
+Wire Wire Line
+	10000 3750 10000 3850
+Wire Wire Line
+	10000 3850 9350 3850
+Connection ~ 8700 3850
+Wire Wire Line
+	10000 1800 10000 1500
+$Comp
+L Device:R R3
+U 1 1 5F5F1F52
+P 10600 1750
+F 0 "R3" H 10670 1796 50  0000 L CNN
+F 1 "102" H 10670 1705 50  0000 L CNN
+F 2 "footprint:R_1608" V 10530 1750 50  0001 C CNN
+F 3 "~" H 10600 1750 50  0001 C CNN
+	1    10600 1750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10300 2000 10600 2000
+Wire Wire Line
+	10600 2000 10600 1900
+Wire Wire Line
+	10600 1600 10600 1500
+Wire Wire Line
+	10600 1500 10000 1500
+Connection ~ 10000 1500
+$Comp
+L Device:Q_NPN_BEC Q4
+U 1 1 5F5F62AE
+P 10500 2550
+F 0 "Q4" H 10690 2596 50  0000 L CNN
+F 1 "2SC4116" H 10690 2505 50  0000 L CNN
+F 2 "footprint:SC-70" H 10700 2650 50  0001 C CNN
+F 3 "~" H 10500 2550 50  0001 C CNN
+	1    10500 2550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10300 2550 10200 2550
+Wire Wire Line
+	10200 2550 10200 2950
+Wire Wire Line
+	7550 2950 10200 2950
+Wire Wire Line
+	10600 2350 10600 2000
+Connection ~ 10600 2000
+Text GLabel 10800 3550 2    50   Input ~ 0
+FWD
+Text GLabel 7350 3550 0    50   Input ~ 0
+REV
+Text GLabel 7350 2000 0    50   Input ~ 0
+PWM
+Wire Wire Line
+	9350 3850 9350 3950
+Connection ~ 9350 3850
+Wire Wire Line
+	9350 3850 8700 3850
+$Comp
+L power:GND #PWR0107
+U 1 1 5F608733
+P 9350 3950
+F 0 "#PWR0107" H 9350 3700 50  0001 C CNN
+F 1 "GND" H 9355 3777 50  0000 C CNN
+F 2 "" H 9350 3950 50  0001 C CNN
+F 3 "" H 9350 3950 50  0001 C CNN
+	1    9350 3950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8700 2550 8900 2550
+Connection ~ 8700 2550
+Wire Wire Line
+	8700 2550 8700 3350
+Wire Wire Line
+	10000 2550 9800 2550
+Connection ~ 10000 2550
+Wire Wire Line
+	10000 2550 10000 2200
+Text GLabel 9800 2550 0    50   Output ~ 0
+MOTOR-
+Text GLabel 8900 2550 2    50   Output ~ 0
+MOTOR+
+Wire Wire Line
+	8700 1500 10000 1500
+$Comp
+L Device:R R8
+U 1 1 5F62A1D5
+P 7150 5500
+F 0 "R8" V 6943 5500 50  0000 C CNN
+F 1 "103" V 7034 5500 50  0000 C CNN
+F 2 "footprint:R_1608" V 7080 5500 50  0001 C CNN
+F 3 "~" H 7150 5500 50  0001 C CNN
+	1    7150 5500
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R9
+U 1 1 5F62A845
+P 7150 5900
+F 0 "R9" V 6943 5900 50  0000 C CNN
+F 1 "103" V 7034 5900 50  0000 C CNN
+F 2 "footprint:R_1608" V 7080 5900 50  0001 C CNN
+F 3 "~" H 7150 5900 50  0001 C CNN
+	1    7150 5900
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	7000 5500 6800 5500
+Wire Wire Line
+	7000 5900 6800 5900
+Text GLabel 6800 5500 0    50   Input ~ 0
+MOTOR+
+Text GLabel 6800 5900 0    50   Input ~ 0
+MOTOR-
+Wire Wire Line
+	7300 5900 7500 5900
+Wire Wire Line
+	7500 5900 7500 5500
+Wire Wire Line
+	7500 5500 7300 5500
+Wire Wire Line
+	7500 5500 7900 5500
+Wire Wire Line
+	7900 5500 7900 5700
+Connection ~ 7500 5500
+$Comp
+L Device:C C6
+U 1 1 5F63625B
+P 7900 5850
+F 0 "C6" H 8015 5896 50  0000 L CNN
+F 1 "104" H 8015 5805 50  0000 L CNN
+F 2 "footprint:C_1005" H 7938 5700 50  0001 C CNN
+F 3 "~" H 7900 5850 50  0001 C CNN
+	1    7900 5850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7900 6000 7900 6100
+$Comp
+L power:GND #PWR0108
+U 1 1 5F6398B0
+P 7900 6100
+F 0 "#PWR0108" H 7900 5850 50  0001 C CNN
+F 1 "GND" H 7905 5927 50  0000 C CNN
+F 2 "" H 7900 6100 50  0001 C CNN
+F 3 "" H 7900 6100 50  0001 C CNN
+	1    7900 6100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7900 5500 8100 5500
+Connection ~ 7900 5500
+$Comp
+L Device:R R10
+U 1 1 5F63CB28
+P 8250 5500
+F 0 "R10" V 8043 5500 50  0000 C CNN
+F 1 "102" V 8134 5500 50  0000 C CNN
+F 2 "footprint:R_1608" V 8180 5500 50  0001 C CNN
+F 3 "~" H 8250 5500 50  0001 C CNN
+	1    8250 5500
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	8400 5500 8600 5500
+Text GLabel 8600 5500 2    50   Output ~ 0
+BEMF
+$Comp
+L Connector_Generic:Conn_01x01 P1
+U 1 1 5F6541E2
+P 800 1500
+F 0 "P1" H 718 1717 50  0000 C CNN
+F 1 "PAD" H 718 1626 50  0000 C CNN
+F 2 "footprint:PAD_1.3x1.3_Hole0.8" H 800 1500 50  0001 C CNN
+F 3 "~" H 800 1500 50  0001 C CNN
+	1    800  1500
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x01 P2
+U 1 1 5F654BA3
+P 800 1900
+F 0 "P2" H 718 2117 50  0000 C CNN
+F 1 "PAD" H 718 2026 50  0000 C CNN
+F 2 "footprint:PAD_1.3x1.3_Hole0.8" H 800 1900 50  0001 C CNN
+F 3 "~" H 800 1900 50  0001 C CNN
+	1    800  1900
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x01 P3
+U 1 1 5F65504A
+P 800 2300
+F 0 "P3" H 718 2517 50  0000 C CNN
+F 1 "PAD" H 718 2426 50  0000 C CNN
+F 2 "footprint:PAD_1.3x1.3_Hole0.8" H 800 2300 50  0001 C CNN
+F 3 "~" H 800 2300 50  0001 C CNN
+	1    800  2300
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x01 P4
+U 1 1 5F655630
+P 800 2900
+F 0 "P4" H 718 3117 50  0000 C CNN
+F 1 "PAD" H 718 3026 50  0000 C CNN
+F 2 "footprint:PAD_1.3x1.3_Hole0.8" H 800 2900 50  0001 C CNN
+F 3 "~" H 800 2900 50  0001 C CNN
+	1    800  2900
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Device:C C7
+U 1 1 5F6559B1
+P 1250 2600
+F 0 "C7" H 1365 2646 50  0000 L CNN
+F 1 "104" H 1365 2555 50  0000 L CNN
+F 2 "footprint:C_1005" H 1288 2450 50  0001 C CNN
+F 3 "~" H 1250 2600 50  0001 C CNN
+	1    1250 2600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x01 P5
+U 1 1 5F656352
+P 800 3700
+F 0 "P5" H 718 3917 50  0000 C CNN
+F 1 "PAD" H 718 3826 50  0000 C CNN
+F 2 "footprint:PAD_1.3x1.3_Hole0.8" H 800 3700 50  0001 C CNN
+F 3 "~" H 800 3700 50  0001 C CNN
+	1    800  3700
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	1000 2300 1250 2300
+Wire Wire Line
+	1250 2300 1250 2450
+Wire Wire Line
+	1250 2300 1450 2300
+Connection ~ 1250 2300
+Wire Wire Line
+	1000 2900 1250 2900
+Wire Wire Line
+	1250 2750 1250 2900
+Connection ~ 1250 2900
+Wire Wire Line
+	1250 2900 1450 2900
+Wire Wire Line
+	1000 1900 1450 1900
+Wire Wire Line
+	1000 1500 1450 1500
+Text GLabel 1450 1500 2    50   Output ~ 0
+RAIL+
+Text GLabel 1450 1900 2    50   Output ~ 0
+RAIL-
+Text GLabel 1450 2300 2    50   Input ~ 0
+MOTOR+
+Text GLabel 1450 2900 2    50   Input ~ 0
+MOTOR-
+$Comp
+L Connector_Generic:Conn_01x01 P6
+U 1 1 5F67F057
+P 800 4100
+F 0 "P6" H 718 4317 50  0000 C CNN
+F 1 "PAD" H 718 4226 50  0000 C CNN
+F 2 "footprint:PAD_1.3x1.3_Hole0.8" H 800 4100 50  0001 C CNN
+F 3 "~" H 800 4100 50  0001 C CNN
+	1    800  4100
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	1000 3700 1250 3700
+Wire Wire Line
+	1250 3700 1250 3600
+Wire Wire Line
+	1000 4100 1250 4100
+Wire Wire Line
+	1250 4100 1250 4200
+$Comp
+L power:+12V #PWR0109
+U 1 1 5F687A2C
+P 1250 3600
+F 0 "#PWR0109" H 1250 3450 50  0001 C CNN
+F 1 "+12V" H 1265 3773 50  0000 C CNN
+F 2 "" H 1250 3600 50  0001 C CNN
+F 3 "" H 1250 3600 50  0001 C CNN
+	1    1250 3600
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0110
+U 1 1 5F687EC4
+P 1250 4200
+F 0 "#PWR0110" H 1250 3950 50  0001 C CNN
+F 1 "GND" H 1255 4027 50  0000 C CNN
+F 2 "" H 1250 4200 50  0001 C CNN
+F 3 "" H 1250 4200 50  0001 C CNN
+	1    1250 4200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1000 5900 1200 5900
+Wire Wire Line
+	1200 5900 1200 5600
+Wire Wire Line
+	1000 5800 1500 5800
+Wire Wire Line
+	1000 6000 1500 6000
+Wire Wire Line
+	1000 6100 1400 6100
+Wire Wire Line
+	1400 6100 1400 6200
+Wire Wire Line
+	1400 6200 1500 6200
+Wire Wire Line
+	1000 6200 1300 6200
+Wire Wire Line
+	1300 6200 1300 6400
+Wire Wire Line
+	1300 6400 1500 6400
+Wire Wire Line
+	1000 6300 1200 6300
+Wire Wire Line
+	1200 6300 1200 6600
+$Comp
+L power:GND #PWR0111
+U 1 1 5F6A4C03
+P 1200 6600
+F 0 "#PWR0111" H 1200 6350 50  0001 C CNN
+F 1 "GND" H 1205 6427 50  0000 C CNN
+F 2 "" H 1200 6600 50  0001 C CNN
+F 3 "" H 1200 6600 50  0001 C CNN
+	1    1200 6600
+	1    0    0    -1  
+$EndComp
+Text GLabel 1500 5800 2    50   BiDi ~ 0
+PWM
+Text GLabel 1500 6000 2    50   BiDi ~ 0
+BEMF
+Text GLabel 1500 6200 2    50   BiDi ~ 0
+MOSI
+Text GLabel 1500 6400 2    50   BiDi ~ 0
+FUNC1
+$Comp
+L power:+5V #PWR0112
+U 1 1 5F5C524E
+P 1200 5600
+F 0 "#PWR0112" H 1200 5450 50  0001 C CNN
+F 1 "+5V" H 1215 5773 50  0000 C CNN
+F 2 "" H 1200 5600 50  0001 C CNN
+F 3 "" H 1200 5600 50  0001 C CNN
+	1    1200 5600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R11
+U 1 1 5F5EDAF9
+P 4650 1950
+F 0 "R11" H 4720 1996 50  0000 L CNN
+F 1 "103" H 4720 1905 50  0000 L CNN
+F 2 "footprint:R_1608" V 4580 1950 50  0001 C CNN
+F 3 "~" H 4650 1950 50  0001 C CNN
+	1    4650 1950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:D_Zener D3
+U 1 1 5F5EE0C4
+P 4650 2650
+F 0 "D3" V 4604 2730 50  0000 L CNN
+F 1 "UDZV5.1B" V 4695 2730 50  0000 L CNN
+F 2 "footprint:UMD2" H 4650 2650 50  0001 C CNN
+F 3 "~" H 4650 2650 50  0001 C CNN
+	1    4650 2650
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:Q_NPN_BEC Q5
+U 1 1 5F5EE851
+P 5150 1800
+F 0 "Q5" H 5340 1846 50  0000 L CNN
+F 1 "2SC4116" H 5340 1755 50  0000 L CNN
+F 2 "footprint:SC-70" H 5350 1900 50  0001 C CNN
+F 3 "~" H 5150 1800 50  0001 C CNN
+	1    5150 1800
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	4650 2800 4650 2900
+Wire Wire Line
+	4650 2500 4650 2300
+Wire Wire Line
+	4650 2300 4650 2100
+Connection ~ 4650 2300
+Wire Wire Line
+	4650 1800 4650 1700
+Wire Wire Line
+	4950 1700 4650 1700
+Connection ~ 4650 1700
+Wire Wire Line
+	5150 2300 5150 2000
+Wire Wire Line
+	4650 2300 5150 2300
+Wire Wire Line
+	4650 2900 5550 2900
+Connection ~ 4650 2900
+Connection ~ 8100 1500
+Wire Wire Line
+	7350 3550 8100 3550
+Wire Wire Line
+	10300 3550 10600 3550
+Wire Wire Line
+	8100 3350 8100 3550
+Connection ~ 8100 3550
+Wire Wire Line
+	8100 3550 8400 3550
+Wire Wire Line
+	8100 3050 8100 2750
+Wire Wire Line
+	10600 3050 10600 2750
+Wire Wire Line
+	10600 3350 10600 3550
+Connection ~ 10600 3550
+Wire Wire Line
+	10600 3550 10800 3550
+$Comp
+L Device:R R6
+U 1 1 5F611CFB
+P 7550 2300
+F 0 "R6" H 7620 2346 50  0000 L CNN
+F 1 "102" H 7620 2255 50  0000 L CNN
+F 2 "footprint:R_1608" V 7480 2300 50  0001 C CNN
+F 3 "~" H 7550 2300 50  0001 C CNN
+	1    7550 2300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R7
+U 1 1 5F612018
+P 7550 3200
+F 0 "R7" H 7620 3246 50  0000 L CNN
+F 1 "102" H 7620 3155 50  0000 L CNN
+F 2 "footprint:R_1608" V 7480 3200 50  0001 C CNN
+F 3 "~" H 7550 3200 50  0001 C CNN
+	1    7550 3200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3650 2900 4650 2900
+Wire Wire Line
+	3650 1700 4650 1700
+Wire Wire Line
+	5550 1700 5550 2150
+Wire Wire Line
+	5550 2450 5550 2900
+$EndSCHEMATC
